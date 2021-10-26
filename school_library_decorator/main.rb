@@ -7,7 +7,6 @@ require "./rental"
 require "./student"
 require "./teacher"
 
-
 def main
   app = App.new()
 
