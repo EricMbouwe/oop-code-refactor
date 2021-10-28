@@ -32,8 +32,7 @@ class App
     student_teacher_option = gets.chomp
 
     if student_teacher_option != "1" && student_teacher_option != "2"
-      puts "Invalid option"
-      return
+      return puts "Invalid option"
     end
 
     puts "Age: "
@@ -75,16 +74,13 @@ class App
   def create_rental
     puts "Select a book from the following list by number"
 
-    @books.each_with_index do |book, index|
-      puts "#{index}) Title \"#{book.title}\", Author: #{book.author}"
-    end
+    list_books()
 
     book_index = gets.chomp.to_i
 
     puts "\nSelect a person from the following list by number (not id)"
-    @people.each_with_index do |person, index|
-      puts "#{index}) [#{person.class}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}"
-    end
+    
+    list_people()
 
     person_index = gets.chomp.to_i
 
